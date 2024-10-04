@@ -55,8 +55,12 @@ public class CellPhone {
                 "Owner Name: " + owner );
     }
 
-    public void dial(String phoneNumber, String owner){
-        System.out.println(owner + "'s phone is calling: " + phoneNumber);
+    //public void dial(CellPhone cellphone){
+    public  void dial(String owner, String phoneNumber){
+        System.out.println(owner + "'s phone is calling you: " + phoneNumber);// wanted to try to add some () like (480)
+        //tho many not necessary since user may input that
+        //unless there's an if else to check?
+        //then maybe use split? refer to BGs Ex for refresher
     }
 
 
