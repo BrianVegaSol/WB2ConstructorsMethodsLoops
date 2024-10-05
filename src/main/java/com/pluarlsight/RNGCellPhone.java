@@ -1,14 +1,16 @@
 package com.pluarlsight;
 
-public class CellPhone {
+public class RNGCellPhone {
     private int serialNumber = 0;
     private String model = "";
     private String carrier = "";
     private String phoneNumber = "";
     private String owner = "";
+    //Experimenting with callCount
+    public static int callCount = 0; //this WOOOORKED :'D
 
     //Empty constructor
-    public CellPhone(){
+    public RNGCellPhone(){
     }
 
     public int getSerialNumber(){
@@ -46,7 +48,7 @@ public class CellPhone {
         this.owner = owner;
     }
     //Overload Ex3
-    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
+    public RNGCellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
         /*setSerialNumber(serialNumber);
         setModel(model);
         setCarrier(carrier);
@@ -65,10 +67,21 @@ public class CellPhone {
 
     //public void dial(CellPhone cellphone){
     public  void dial(String owner, String phoneNumber){
+        System.out.println("------------------");
         System.out.println(owner + "'s phone is calling you: " + phoneNumber);// wanted to try to add some () like (480)
         //tho many not necessary since user may input that
         //unless there's an if else to check?
         //then maybe use split? refer to BGs Ex for refresher
+    }
+
+    public static void myVars(){
+        callCount ++;
+
+        System.out.println("Serial Number: 123456789\n" +
+                "Model: Samsung Galaxy Note 9\n" +
+                "Carrier: Mint\n" +
+                "Phone Number: 602-555-7777\n" +
+                "Owner Name: Brian Ve");
     }
 
 

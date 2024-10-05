@@ -1,5 +1,6 @@
 package com.pluarlsight;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class CellPhoneService {
@@ -59,6 +60,12 @@ public class CellPhoneService {
         System.out.println();
         cellPhone2.dial(cellPhone1.getOwner(), cellPhone1.getPhoneNumber());
 
+        //Ex3
+        CellPhone cellPhone3 = new CellPhone();
+        setVars(cellPhone3);
+        cellPhone3.dial(cellPhone1.getOwner(), cellPhone1.getPhoneNumber());
+        display(cellPhone3);
+
 
 
 
@@ -75,4 +82,21 @@ public class CellPhoneService {
     public static void display(CellPhone phone) {
         phone.printAll(serialNumber, model, carrier, phoneNumber , owner);
     }
+
+
+    //Ex3
+    public static void setVars (CellPhone phone){
+        phone.setSerialNumber(serialNumber);
+        phone.setModel(model);
+        phone.setCarrier(carrier);
+        phone.setPhoneNumber(phoneNumber);
+        phone.setOwner(owner);
+    }
+
+    //++ a tempVar everytime a method is called??? OR if newObject created ++ tempVar
+    // if setVars/Cellphone cellphone[] called, then ++ so the [] changes and userInput is for that particular cellPhone[]
+    //Make an array of CellPhone cellPhone objects and loop through array???
+
+
+
 }
