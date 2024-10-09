@@ -89,16 +89,7 @@ public class CellPhoneService {
         cellPhone1.dial(cellPhone1.getPhoneNumber(), cellPhone1.getOwner());
         cellPhone3.dial(cellPhone1);
 
-
-
-
-
-
-
-
-
-
-
+        scan.close();
     }
     //In your Main class, add a static method called display() that accepts a CellPhone object as a parameter.  (see below)
     public static void display(CellPhone phone) {

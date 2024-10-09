@@ -35,6 +35,12 @@ public class TestStatistics {
 
         Arrays.fill(testScores, 45);
 
+        //Another solution using Streams
+        /*int[] testScores = {100, 63, 94, 88, 55, 100, 98, 80, 90, 73};
+        System.out.println("Avarage test score: " + Arrays.stream(testScores).average().getAsDouble());
+        System.out.println("Highest grade: " + Arrays.stream(testScores).max().getAsInt());
+        System.out.println("Lowest grade: " + Arrays.stream(testScores).min().getAsInt());*/
+
 
 
 
