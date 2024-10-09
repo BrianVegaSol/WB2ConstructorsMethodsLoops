@@ -69,6 +69,8 @@ public class VehicleInventory {
     public void addVehicle() {
 
         addedVehicleCount++;
+        System.out.println("Vehicle Count: " + vehicleCount);
+
         //Set
         System.out.println("Enter in your Vehicle Information");
         System.out.println("Vehicle ID");
@@ -81,11 +83,12 @@ public class VehicleInventory {
         setOdometerReading(scan.nextInt());
         System.out.println("Price: ");
         setPrice(scan.nextFloat());
-        listAllVehicles(vehicles);
+        //listAllVehicles(vehicles);
+        System.out.println("Vehicle Count: " + vehicleCount);
         //Get
-        for (vehicleCount = 6; vehicleCount < 20; vehicleCount++) {
+        /*for (vehicleCount = 6; vehicleCount < vehicles.length; vehicleCount++) {
 
-        }
+        }*/
         Arrays.fill(vehicles,"Vehicle " + vehicleCount +": \nVehicle ID: " + getVehicleID() +
                 "\nMake/Moddel: "+ getMakeModel() +
                 "\nColor: " + getColor() +
@@ -100,15 +103,16 @@ public class VehicleInventory {
         listAllVehicles(vehicles);
     }
 
-    public void findVehicleByMakeModel (String [] vehicles) {
+    public void findVehicleByMakeModel () {
         //listAllVehicles(vehicles);
         //Arrays.fill(vehicle.);
         //vehicles.split(\\);
-        for (int i = 0; i < vehicles.length; i++) {
+        for (int i = 0; i <= vehicles.length; i++) {
             String vehicle = vehicles[i];
             String[] firstSplit = vehicle.split("\n");
             System.out.println("-------------------------------------");
-            System.out.println("Vehicle " + (i + 1) + "\n");
+            int vehicleNumber = i + 1;
+            System.out.println("Vehicle " + vehicleNumber + "\n");
 
             System.out.println(firstSplit[2]);
         }
@@ -127,7 +131,7 @@ public class VehicleInventory {
             System.out.println(vehicle);
             System.out.println("-------------------------------------");
             //System.out.println("Number of Vehicles: " + vehicleCount);  This is in the switch
-            vehicleCount++;
+            //vehicleCount++;
         }
 
         //System.out.println("Number of Vehicles: " + vehicleCount);
@@ -157,8 +161,7 @@ public class VehicleInventory {
 
     }
 
-    static int addedVehicleCount = 0;
-    static int vehicleCount = 0 + addedVehicleCount;
+
     static Scanner scan = new Scanner(System.in);
     static String[] vehicles = {"Vehicle 1: \nVehicle ID: 101121\nMake/Moddel: Ford Explorer\nColor: Red\nOdometer Reading: 45000\nPrice: 13500",
             "Vehicle 2: \nVehicle ID: 101122\nMake/Moddel: Toyota Camry\nColor: Blue\nOdometer Reading: 60000\nPrice: 11000",
@@ -166,7 +169,10 @@ public class VehicleInventory {
             "Vehicle 4: \nVehicle ID: 101124\nMake/Moddel: Honda Civic\nColor: White\nOdometer Reading: 70000\nPrice: 7500",
             "Vehicle 5: \nVehicle ID: 101125\nMake/Moddel: Subaru Outback\nColor: Green\nOdometer Reading: 55000\nPrice: 14500",
             "Vehicle 6: \nVehicle ID: 101126\nMake/Moddel: Jeep Wrangler\nColor: Yellow\nOdometer Reading: 30000\nPrice: 16000",
+            "", "", "", "", ""
     };//6
+    static int addedVehicleCount = 0;
+    static int vehicleCount = vehicles.length + addedVehicleCount;
 
     public static void main(String[] args) {
         VehicleInventory v1 = new VehicleInventory();
@@ -198,7 +204,7 @@ public class VehicleInventory {
                     System.out.println("Number of Vehicles: " + vehicleCount);
                     break;
                 case 2:
-                    v1.findVehicleByMakeModel(vehicles);
+                    v1.findVehicleByMakeModel();
                     break;
                 case 3:
                     v1.findVehiclesByPrice(vehicles);
