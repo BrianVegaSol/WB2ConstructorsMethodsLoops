@@ -67,7 +67,6 @@ public class VehicleInventory {
     }
 
     public void addVehicle() {
-
         addedVehicleCount++;
         System.out.println("Vehicle Count: " + vehicleCount);
 
@@ -89,6 +88,7 @@ public class VehicleInventory {
         /*for (vehicleCount = 6; vehicleCount < vehicles.length; vehicleCount++) {
 
         }*/
+        //DELETE ITHISTHISTS
         Arrays.fill(vehicles,"Vehicle " + vehicleCount +": \nVehicle ID: " + getVehicleID() +
                 "\nMake/Moddel: "+ getMakeModel() +
                 "\nColor: " + getColor() +
@@ -100,7 +100,7 @@ public class VehicleInventory {
         //System.out.println("Vehicle " + vehicleCount + ":\n" + addVehicle);
 
         //Print updated array
-        listAllVehicles(vehicles);
+        listAllVehicles();
     }
 
     public void findVehicleByMakeModel () {
@@ -111,13 +111,15 @@ public class VehicleInventory {
             String vehicle = vehicles[i];
             String[] firstSplit = vehicle.split("\n");
             System.out.println("-------------------------------------");
+            //Possible issue
+            //Old code was : System.out.println("Vehicle " + (i + 1) + "\n");
             int vehicleNumber = i + 1;
             System.out.println("Vehicle " + vehicleNumber + "\n");
 
             System.out.println(firstSplit[2]);
         }
     }
-    public static String[] listAllVehicles (String [] vehicles) {//May need to remove parameter
+    public static void listAllVehicles () {//May need to remove parameter
         /*String[] vehicles = new String[20];
         vehicles = new String[]{"Vehicle 1: \nVehicle ID: 101121\nMake/Moddel: Ford Explorer\nColor: Red\nOdometer Reading: 45000\nPrice: 13500",
                 "Vehicle 2: \nVehicle ID: 101122\nMake/Moddel: Toyota Camry\nColor: Blue\nOdometer Reading: 60000\nPrice: 11000",
@@ -135,7 +137,7 @@ public class VehicleInventory {
         }
 
         //System.out.println("Number of Vehicles: " + vehicleCount);
-        return vehicles;
+        //return vehicles;
     }
     public void findVehiclesByPrice(String [] vehicles) {
         for (int i = 0; i < vehicles.length; i++) {
@@ -172,7 +174,7 @@ public class VehicleInventory {
             "", "", "", "", ""
     };//6
     static int addedVehicleCount = 0;
-    static int vehicleCount = vehicles.length + addedVehicleCount;
+    static int vehicleCount = vehicles.length + addedVehicleCount; //Possible issue
 
     public static void main(String[] args) {
         VehicleInventory v1 = new VehicleInventory();
@@ -195,7 +197,7 @@ public class VehicleInventory {
             int response = scan.nextInt();
             switch (response) {
                 case 1:
-                    listAllVehicles(vehicles);//May need to remove from method
+                    listAllVehicles();//May need to remove from method
                     /*System.out.println("Return to Main Menu? (y/n)");
                     char goToMainMenu = scan.next().charAt(0);
                     if (Character.toUpperCase(goToMainMenu) == 'n') {

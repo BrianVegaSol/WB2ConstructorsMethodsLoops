@@ -27,11 +27,14 @@ public class TestStatistics {
         }
         //System.out.println(sum);
         int average = sum/testScores.length;
-        int median = (testScores.length) / 2;
+        int median;
+        //if ((testScores.length) % 2 == 1) {
+
+        //}
         System.out.println("Average test score was: " + average);
         System.out.println("Highest test score was: " + (testScores[9]));
         System.out.println("Lowest test score was: " + testScores[0]);
-        System.out.println(median);
+        System.out.println("Median test score was: " /*+ median*/);
 
         Arrays.fill(testScores, 45);
 
