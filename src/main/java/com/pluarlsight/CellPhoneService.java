@@ -86,8 +86,8 @@ public class CellPhoneService {
         System.out.println();
         display(cellPhone3);
         //Overloaded dial
+        cellPhone1.dial(cellPhone1.getPhoneNumber(), cellPhone1.getOwner());
         cellPhone3.dial(cellPhone1);
-
 
 
 
@@ -106,7 +106,7 @@ public class CellPhoneService {
         System.out.println("--------------------");
         System.out.println(phone.getOwner() + "'s Info (Call # " + displayCall + ")");
         //phone.printAll(serialNumber, model, carrier, phoneNumber , owner);
-        phone.printAll(phone.getSerialNumber(), phone.getModel(),phone.getCarrier(), phone.getPhoneNumber(), phone.getOwner());
+        phone.printAll();
     }
 
 

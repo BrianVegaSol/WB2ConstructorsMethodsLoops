@@ -1,16 +1,25 @@
 package com.pluarlsight;
 
 public class RNGCellPhone {
-    private int serialNumber = 0;
-    private String model = "";
-    private String carrier = "";
-    private String phoneNumber = "";
-    private String owner = "";
+    private int serialNumber;
+    private String model;
+    private String carrier;
+    private String phoneNumber;
+    private String owner;
     //Experimenting with callCount
     public static int callCount = 0; //this WOOOORKED :'D
 
     //Empty constructor
-    public RNGCellPhone(){
+    public RNGCellPhone () {
+
+    }
+
+    public RNGCellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
+         this.serialNumber = 0;
+         this.model = "";
+         this.carrier = "";
+         this.phoneNumber = "";
+         this.owner = "";
     }
 
     public int getSerialNumber(){
@@ -48,13 +57,13 @@ public class RNGCellPhone {
         this.owner = owner;
     }
     //Overload Ex3
-    public RNGCellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
+    //public RNGCellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
         /*setSerialNumber(serialNumber);
         setModel(model);
         setCarrier(carrier);
         setPhoneNumber(phoneNumber);
         setOwner(owner);*/
-    }
+    //}
 
     //Why use the get/set when you can just use scanned vars + print???
     public void printAll(int serialNumber, String model, String carrier, String phoneNumber, String owner){

@@ -3,6 +3,7 @@ package com.pluarlsight;
 public class RollTheDice {
     static int i = 0;
     public static void main(String[] args) {
+        //Variables
         int roll1;
         int roll2;
         int result;
